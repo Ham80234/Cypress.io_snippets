@@ -1,0 +1,92 @@
+{
+	"For":{
+		"prefix": "cyfram",
+		"description": "Basic framing for cypress test",
+		"body": ["import * as Constants from '../../../../../helpers/Constants.js'",
+		"",
+		"describe('$1', () => {",
+			"\tlet User = $2",
+			"\tbefore(() => {",
+				"\t\tcy.setCookie('enable_tealium', 'N')",
+				"\t\tcy.headlessLogin(User, false, true)",
+				"\t\tcy.visit('$3')",
+			"\t})",
+			"\tit(`$4`, () => {",
+			"$5",	
+			"\t})",
+			"",
+		"})"]
+	},
+	"import stuff":{
+		"prefix": "imp",
+		"description": "import a helper file",
+		"body": "import * as $1 from '../../../../../helpers/$2'"
+	},
+	"Cypress Get be.visible":{
+		"prefix": "cygb",
+		"description": "cy.get().should('be.visible')",
+		"body": "cy.get($1).should('be.visible');"
+	},
+	"Cypress Get contain":{
+		"prefix": "cygc",
+		"description": "cy.get().should('contain', '')",
+		"body": "cy.get($1).should('contain', '$2');"
+	},
+	"Cypress Get Clicks":{
+		"prefix": "cyclick",
+		"description": "cy.get().click()",
+		"body": "cy.get($1).click();"
+	},
+	"Cypress Get type":{
+		"prefix": "cytype",
+		"description": "cy.get().type()",
+		"body": "cy.get($1).type($2);"
+	},
+	"Cypress route":{
+		"prefix": "cyr",
+		"description": "cypress route ",
+		"body": ["cy.server();",
+				 "cy.route('$1', '$2').as('$3');"]
+	},
+	"Cypress request":{
+		"prefix": "cyre",
+		"description": "cypress request ",
+		"body": "cy.request('$1')"
+	},
+	"should be.visible":{
+		"prefix": "sb",
+		"description": "cypress should be.visible ",
+		"body": ".should('be.visble')"
+	},
+	"it function be.visible":{
+		"prefix": "itbv",
+		"description": "Creates a new it statment",
+		"body":["it(`be.visible ${$1} should be visible`, () => {",
+				"\tcy.get($2).should('be.visible');",
+		  		"});"]
+	},
+	"it function":{
+		"prefix": "itct",
+		"description": "Creates a new it statment",
+		"body":["it(`Contains ${$1} contains $2`, () => {",
+				"\tcy.get($3).should('contain', '$4')",
+		  		"});"]
+	},
+	"Cypress not.exsist":{
+		"prefix": "cyne",
+		"description": "cypress should not.exist ",
+		"body": "cy.get($1).should('not.exsist');"
+	},
+	" export const":{
+		"prefix": "ex",
+		"description": "export const ",
+		"body": "export const $1 = '$2'"
+	}
+	
+	
+
+	
+	
+	
+}
+
