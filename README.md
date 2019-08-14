@@ -10,6 +10,10 @@ The purpose of this extension is to speed QA Development by automating the boile
 
 Navigate to <i>/Code/User/snippets/javascript.json</i> inside of vscodes files 
 then place this file inside of the folder
+
+... or just hit *command + Shift + Space* and typr snippets, then add the json to the global snippet dir
+
+
 <hr>
 <h3>Code Pallet</h3>
  there are many different flavors of the same bolier plate to ease development suchs as...
